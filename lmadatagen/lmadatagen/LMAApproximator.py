@@ -4,7 +4,7 @@
 import random
 import pandas as pd
 import matplotlib.pyplot as plt
-import Prettyplots as pp
+import lmadatagen.Prettyplots as pp
 import numpy as np
 from functools import reduce
 from sklearn.cluster import KMeans
