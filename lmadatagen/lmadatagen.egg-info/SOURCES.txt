@@ -1,0 +1,10 @@
+setup.py
+lmadatagen/LMAApproximator.py
+lmadatagen/LMAJSONUtil.py
+lmadatagen/Prettyplots.py
+lmadatagen/__init__.py
+lmadatagen.egg-info/PKG-INFO
+lmadatagen.egg-info/SOURCES.txt
+lmadatagen.egg-info/dependency_links.txt
+lmadatagen.egg-info/not-zip-safe
+lmadatagen.egg-info/top_level.txt
