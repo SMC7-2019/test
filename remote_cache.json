@@ -2,7 +2,7 @@
   "name": "Remote JSON",
   "data": [1, 2, 3, 4, 5],
   "nested": {
-      "raw": True,
+      "raw": true,
       "arr": [6, 7, 8, 9, 10]
    }
 }
