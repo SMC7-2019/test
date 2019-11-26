@@ -16,5 +16,11 @@ joint_indeces = [
          13, 14, 15, 16
 ]
 
+template = "\r{0}: [{1:50s}] {2:.1f}%"
+def print_progress(description, amount, marker='#'):
+    print(
+          template.format(description, marker * int(amount * 50), amount*100), end="", flush=True
+    )
+
 from .LMAJSONUtil import LMAJSONUtil
 from .LMAApproximator import LMARunner

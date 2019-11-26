@@ -9,19 +9,7 @@ import numpy as np
 from functools import reduce
 from sklearn.cluster import KMeans
 from scipy.signal import lfilter, gaussian, convolve
-
-'''
-    PURE UTILITY
-'''
-def print_progress(desc, amt):
-    print(
-        "\r{0}: [{1:50s}] {2:.1f}%".format(
-            desc,
-            '#' * int(amt * 50), 
-            amt*100
-        ), 
-        end="", flush=True
-    )
+from lmadatagen import print_progress
 
 def np_step(x, a):
     boolean_arr = np.zeros_like(x).astype(np.int32)
@@ -367,7 +355,9 @@ class LMARunner(object):
             self.lma_list.append(lma)
             feature = lma.get_motion_features()
             feature_list.append(feature)
-            print_progress('[*]  Processing', elp/tot)
+            
+            if print_progress:
+                print_progress('[*]  Processing', elp/tot)
         
         self.nframes = len(self.lma_list)
         self.ngestures = LabanApproximator.GESTURES_PER_BATCH 
